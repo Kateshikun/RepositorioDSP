@@ -12,18 +12,23 @@ namespace Ejercicio2__DSP
         //Rudy Mauricio Gonsalez Pineda GP250120
         static void Main(string[] args)
         {
-            // Crear instancias
+            /// <summary>
+            /// Creacion de instancias de la clase Conjunto (se iran probando los constructores)
+            /// </summary>
             Conjunto conjunto1 = new Conjunto();
             Conjunto conjunto2 = new Conjunto();
             Conjunto conjunto3 = new Conjunto(ValoresAleatorios());
 
-            // Pedir datos al usuario
-            Console.WriteLine("Bienvenido al programa de Conjunto de Elementos");
-            Console.WriteLine("\n--Ingrese 5 decimales positivos para el conjunto 1--");
+            /// <summary>
+            /// Se le solicita al usuario ingresar 5 decimales positivos para el conjunto1
+            /// Si el numero ya existe o no es positivo, no se agrega
+            /// </summary>
+            Console.WriteLine("\tBienvenido al programa de Conjunto de Elementos");
+            Console.WriteLine("\n\t--Ingrese 5 decimales positivos para el conjunto 1--");
 
             for (int i = 0; i < 5; i++)
             {
-                Console.Write($"num {i + 1}: ");
+                Console.Write($"\tnum {i + 1}: ");
                 string entrada = Console.ReadLine();
                 if (decimal.TryParse(entrada, out decimal num))
                 {
@@ -35,65 +40,63 @@ namespace Ejercicio2__DSP
                 else
                 {
                     Console.WriteLine("Valor inválido. Intente de nuevo.");
-                    i--; // repetir intento
+                    i--;
                 }
             }
 
-            // Mostrar conjunto 1
-            Console.WriteLine("\nElementos del conjunto 1:");
-            ImprimirElementos(conjunto1);
-
-            // Mostrar conjunto 2 (vacío)
-            Console.WriteLine("\nElementos del conjunto 2:");
+            /// <summary>
+            /// Se muestran los elementos de los conjuntos
+            /// El conjunto 1 tiene los numeros ingresados por el usuario
+            /// El conjunto 2 esta vacio
+            /// El conjunto 3 tiene 15 numeros aleatorios entre [-10,10] (solo se guardan los positivos y sin duplicados)
+            /// </summary>
+            Console.WriteLine("\n\tElementos del conjunto 1:");
+            ImprimirElementos(conjunto1);        
+            Console.WriteLine("\n\tElementos del conjunto 2:");
             ImprimirElementos(conjunto2);
-
-            // Mostrar conjunto 3 (aleatorios)
-            Console.WriteLine("\nElementos del conjunto 3:");
+            Console.WriteLine("\n\tElementos del conjunto 3:");
             ImprimirElementos(conjunto3);
 
-            // --- Demostración de métodos ---
-            Console.WriteLine("\n--Pruebas de métodos--");
-
-            // Cantidad de elementos
-            Console.WriteLine($"Conjunto1 tiene {conjunto1.CantidadElementos()} elementos.");
-
-            // Comprobar existencia
-            Console.Write("Digite un número a buscar en conjunto1: ");
+            /// <summary>
+            /// Se prueban los métodos CantidadElementos, ExisteElemento y ExtraerElemento
+            /// </summary>
+            Console.WriteLine("\n\t--Pruebas de métodos--");
+            Console.WriteLine($"\tConjunto1 tiene {conjunto1.CantidadElementos()} elementos.");
+            Console.Write("\tDigite un número a buscar en conjunto1: ");
             if (decimal.TryParse(Console.ReadLine(), out decimal buscado))
             {
                 Console.WriteLine(conjunto1.ExisteElemento(buscado)
-                    ? "El número existe en el conjunto."
-                    : "El número NO existe en el conjunto.");
+                    ? "\tEl número existe en el conjunto." // "?" significa un if y ":" un else
+                    : "\tEl número NO existe en el conjunto.");
             }
             else
             {
-                Console.WriteLine("Entrada inválida.");
+                Console.WriteLine("\tEntrada inválida.");
             }
 
-            // Extraer elemento
-            Console.Write("Digite un número a extraer de conjunto1: ");
+            Console.Write("\tDigite un número a extraer de conjunto1: ");
             if (decimal.TryParse(Console.ReadLine(), out decimal eliminar))
             {
                 var resultado = conjunto1.ExtraerElemento(eliminar);
                 if (resultado != null)
-                    Console.WriteLine($"Se eliminó el número {resultado}.");
+                    Console.WriteLine($"\tSe eliminó el número {resultado}.");
                 else
-                    Console.WriteLine("El número no se encontró.");
+                    Console.WriteLine("\tEl número no se encontró.");
             }
             else
             {
-                Console.WriteLine("Entrada inválida.");
+                Console.WriteLine("\tEntrada inválida.");
             }
 
-            // Mostrar de nuevo conjunto1
-            Console.WriteLine("\nConjunto1 después de extracción:");
+            // Demostracion final del conjunto1 después de la extracción
+            Console.WriteLine("\n\tConjunto1 después de extracción:");
             ImprimirElementos(conjunto1);
 
-            Console.WriteLine("\nFin de la demostración. Presione una tecla para salir.");
+            Console.WriteLine("\n\tFin de la demostración. Presione una tecla para salir.");
             Console.ReadKey();
         }
 
-        // Generar 15 decimales aleatorios entre [-10,10]
+        // Genera 15 decimales aleatorios entre [-10,10]
         public static decimal[] ValoresAleatorios()
         {
             Random aleatorio = new Random();
@@ -107,7 +110,7 @@ namespace Ejercicio2__DSP
             return numAleatorios;
         }
 
-        // Método auxiliar para imprimir elementos de un conjunto
+        // Método aparte para imprimir elementos de un conjunto (Asi no se repite el código)
         public static void ImprimirElementos(Conjunto conjunto)
         {
             var elementos = conjunto.ObtenerElementos();

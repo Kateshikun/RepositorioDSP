@@ -1,12 +1,11 @@
-﻿// Conjunto.cs
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Ejercicio2__DSP
 {
     internal class Conjunto
     {
-        // Único objeto List permitido (privado)
+        // Único objeto List (privado)
         private List<decimal> conjuntoNumeros = new List<decimal>();
 
         // Contador privado para evitar usar miembros de List distintos de Add/Remove
