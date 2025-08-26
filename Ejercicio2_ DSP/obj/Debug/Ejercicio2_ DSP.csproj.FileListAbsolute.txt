@@ -6,3 +6,11 @@ C:\Users\danie\OneDrive\Escritorio\Ejercicio2_ DSP\Ejercicio2_ DSP\obj\Debug\Eje
 C:\Users\danie\OneDrive\Escritorio\Ejercicio2_ DSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.exe
 C:\Users\danie\OneDrive\Escritorio\Ejercicio2_ DSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.pdb
 C:\Users\danie\OneDrive\Escritorio\Ejercicio2_ DSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.exe.config
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\bin\Debug\Ejercicio2_ DSP.exe.config
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\bin\Debug\Ejercicio2_ DSP.exe
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\bin\Debug\Ejercicio2_ DSP.pdb
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.exe.config
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.exe
+C:\Users\danie\OneDrive\Escritorio\RepositorioDSP\Ejercicio2_ DSP\obj\Debug\Ejercicio2_ DSP.pdb
